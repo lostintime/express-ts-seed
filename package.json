@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "node ./dist/index.js"
+    "start": "node ./dist/index.js",
+    "clean": "gulp clean",
+    "build": "gulp build"
   },
   "engine": "node >= 8.6.0",
   "dependencies": {
