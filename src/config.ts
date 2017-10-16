@@ -12,7 +12,7 @@ type ServicesConfig = {
 const isUserServiceConfig = hasFields({
   title: failWith(new Error('Invalid services.users.title configuration option: string expected'))(isString),
   enabled: failWith(new Error('Invalid services.users.enabled configuration option: boolean expected'))(isBoolean),
-  retries: failWith(new Error('Invalid services.users.retries configuration option: boolean expected'))(isNumber)
+  retries: failWith(new Error('Invalid services.users.retries configuration option: number expected'))(isNumber)
 });
 
 const isServicesConfig = hasFields({
