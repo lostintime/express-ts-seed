@@ -1,0 +1,9 @@
+{
+  "services": {
+    "users": {
+      "title": "Users Service",
+      "enabled": true,
+      "retries": 3
+    }
+  }
+}

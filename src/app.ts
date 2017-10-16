@@ -7,6 +7,7 @@ import {HttpError} from 'http-errors';
 import * as createHttpError from 'http-errors';
 import {buildRouter} from './routes';
 import * as cors from 'cors';
+import appConfig from './config';
 
 export const app = express();
 
@@ -37,7 +38,8 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 // routes
 app.use('/', cors(), buildRouter({
-  log: winston
+  log: winston,
+  config: appConfig.services.users
 }));
 
 // error handlers

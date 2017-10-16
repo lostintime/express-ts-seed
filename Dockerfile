@@ -1,2 +1,2 @@
-FROM node:8.6.0-onbuild
+FROM node:8.7.0-onbuild
 
