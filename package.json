@@ -20,6 +20,7 @@
     "mime": "^2.0.3",
     "on-headers": "^1.0.1",
     "request": "^2.83.0",
+    "typematcher": "^0.3.0",
     "winston": "^2.4.0"
   },
   "devDependencies": {
