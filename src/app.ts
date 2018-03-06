@@ -1,4 +1,3 @@
-///<reference path="missing-definitions.d.ts" />
 import * as express from 'express';
 import * as winston from 'winston';
 import * as expressWinston from 'express-winston';
@@ -18,16 +17,14 @@ const logLevel = process.env.LOG_LEVEL ? process.env.LOG_LEVEL : defaultLogDevel
 winston.configure({
   level: logLevel,
   transports: [
-    new (winston.transports.Console)({level: logLevel}),
+    new (winston.transports.Console)({
+      level: logLevel,
+      timestamp: true
+    }),
   ],
 });
 
-app.use(expressWinston.logger({
-  winstonInstance: winston,
-  meta: true,
-  exitOnError: false,
-  // expressFormat: true,
-}));
+app.use(expressWinston.logger({ winstonInstance: winston }));
 
 // disable X-Powered-By header
 app.disable('x-powered-by');
